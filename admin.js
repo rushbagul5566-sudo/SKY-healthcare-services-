@@ -28,7 +28,7 @@ querySnapshot.forEach((doc) => {
             <td>${data.mobile}</td>
             <td>${data.service}</td>
             <td>${data.address}</td>
-            <td>${data.date.toDate()}</td>
+            <td>${data.date ? new Date(data.date.seconds * 1000) : ""}</td>
         </tr>
     `;
 
