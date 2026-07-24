@@ -83,3 +83,24 @@ if(data.service === "Caretaker"){
 document.getElementById("totalBookings").innerHTML = total;
 document.getElementById("nursingCount").innerHTML = nursing;
 document.getElementById("caretakerCount").innerHTML = caretaker;
+window.acceptBooking = async function(id) {
+
+  await updateDoc(doc(db, "bookings", id), {
+    status: "Confirmed"
+  });
+
+  alert("Booking Confirmed!");
+  location.reload();
+
+};
+
+window.rejectBooking = async function(id) {
+
+  await updateDoc(doc(db, "bookings", id), {
+    status: "Cancelled"
+  });
+
+  alert("Booking Cancelled!");
+  location.reload();
+
+};
