@@ -30,11 +30,12 @@ const address = document.getElementById("address").value;
 try {
 
 await addDoc(collection(db, "bookings"), {
-name,
-mobile,
-service,
-address,
-date: new Date()
+  name,
+  mobile,
+  service,
+  address,
+  status: "Pending",
+  date: new Date()
 });
 const message = 
 `New Booking Received - Sky Healthcare
