@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sky Healthcare Staff</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>👨‍⚕️ Sky Healthcare - Staff Management</h1>
+
+<form id="staffForm">
+
+<input type="text" id="staffName" placeholder="Staff Name" required>
+
+<input type="text" id="staffMobile" placeholder="Mobile Number" required>
+
+<select id="staffRole">
+    <option>Nurse</option>
+    <option>Caretaker</option>
+    <option>Physiotherapist</option>
+    <option>Ward Boy</option>
+</select>
+
+<button type="submit">Add Staff</button>
+
+</form>
+
+<hr>
+
+<table border="1">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Mobile</th>
+<th>Role</th>
+</tr>
+</thead>
+
+<tbody id="staffList">
+</tbody>
+
+</table>
+
+<script type="module" src="staff.js"></script>
+
+</body>
+</html>
