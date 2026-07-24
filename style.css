@@ -173,3 +173,24 @@ nav a:hover{
     line-height:1.8;
     color:#555;
 }
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    z-index:999;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
