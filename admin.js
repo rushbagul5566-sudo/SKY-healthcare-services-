@@ -35,7 +35,9 @@ let todayCount = 0;
 let total = 0;
 let nursing = 0;
 let caretaker = 0;
-querySnapshot.forEach((doc) => {
+querySnapshot.forEach((doc) => { document.getElementById("totalBookings").innerHTML = total;
+document.getElementById("nursingCount").innerHTML = nursing;
+document.getElementById("caretakerCount").innerHTML = caretaker;
 
     const data = doc.data();
 total++;
