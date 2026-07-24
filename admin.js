@@ -108,3 +108,19 @@ window.rejectBooking = async function(id) {
   location.reload();
 
 };
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keyup", function () {
+  const filter = searchBox.value.toLowerCase();
+  const rows = document.querySelectorAll("tbody tr");
+
+  rows.forEach((row) => {
+    const text = row.innerText.toLowerCase();
+
+    if (text.includes(filter)) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  });
+});
