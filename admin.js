@@ -26,11 +26,27 @@ onAuthStateChanged(auth, (user) => {
 const bookingList = document.getElementById("bookingList");
 
 const querySnapshot = await getDocs(collection(db, "bookings"));
+let total = 0;
+let nursing = 0;
+let caretaker = 0;
 
+const today = new Date().toDateString();
+let todayCount = 0;
+let total = 0;
+let nursing = 0;
+let caretaker = 0;
 querySnapshot.forEach((doc) => {
 
     const data = doc.data();
+total++;
 
+if(data.service === "Home Nursing"){
+    nursing++;
+}
+
+if(data.service === "Caretaker"){
+    caretaker++;
+}
     bookingList.innerHTML += `
         <tr>
             <td>${data.name}</td>
