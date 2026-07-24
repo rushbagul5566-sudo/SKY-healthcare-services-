@@ -209,3 +209,21 @@ nav a:hover{
 .footer p{
     margin:8px 0;
 }
+.status{
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+    font-weight:bold;
+}
+
+.pending{
+    background:orange;
+}
+
+.confirmed{
+    background:green;
+}
+
+.cancelled{
+    background:red;
+}
