@@ -35,7 +35,17 @@ let todayCount = 0;
 let total = 0;
 let nursing = 0;
 let caretaker = 0;
-querySnapshot.forEach((doc) => { document.getElementById("totalBookings").innerHTML = total;
+querySnapshot.forEach((doc) => 
+  total = total + 1;
+
+if(data.service == "Home Nursing"){
+    nursing = nursing + 1;
+}
+
+if(data.service == "Caretaker"){
+    caretaker = caretaker + 1;
+}
+  { document.getElementById("totalBookings").innerHTML = total;
 document.getElementById("nursingCount").innerHTML = nursing;
 document.getElementById("caretakerCount").innerHTML = caretaker;
 
@@ -60,3 +70,6 @@ if(data.service === "Caretaker"){
     `;
 
 });
+document.getElementById("totalBookings").innerHTML = total;
+document.getElementById("nursingCount").innerHTML = nursing;
+document.getElementById("caretakerCount").innerHTML = caretaker;
