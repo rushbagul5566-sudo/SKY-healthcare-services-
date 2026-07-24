@@ -154,3 +154,22 @@ nav a:hover{
 .booking button:hover{
     background:#084ea6;
 }
+.about{
+    padding:80px 8%;
+    background:#eef7ff;
+    text-align:center;
+}
+
+.about h2{
+    font-size:36px;
+    color:#0b63ce;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+}
