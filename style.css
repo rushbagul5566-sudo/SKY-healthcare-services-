@@ -227,3 +227,11 @@ nav a:hover{
 .cancelled{
     background:red;
 }
+#searchBox{
+    width:100%;
+    padding:12px;
+    margin:20px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+        }
