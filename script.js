@@ -48,3 +48,34 @@ if (bookingForm) {
     }
   });
 }
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const bookingForm = document.getElementById("bookingForm");
+
+if (bookingForm) {
+  bookingForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("mobile").value;
+    const service = document.getElementById("service").value;
+    const address = document.getElementById("address").value;
+
+    try {
+      await addDoc(collection(db, "bookings"), {
+        name,
+        mobile,
+        service,
+        address,
+        date: new Date()
+      });
+
+      alert("Booking Successfully Submitted!");
+      bookingForm.reset();
+
+    } catch (error) {
+      console.log(error);
+      alert("Error submitting booking");
+    }
+  });
+}
