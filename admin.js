@@ -70,7 +70,11 @@ if(data.service === "Caretaker"){
             <td>${data.mobile}</td>
             <td>${data.service}</td>
             <td>${data.address}</td>
-            <td>${data.status}</td>
+            <td>
+<span class="status ${data.status.toLowerCase()}">
+${data.status}
+</span>
+</td>
             <td>${data.date ? new Date(data.date.seconds * 1000) : ""}</td>
             <td>
     <button onclick="acceptBooking('${doc.id}')">✅ Accept</button>
