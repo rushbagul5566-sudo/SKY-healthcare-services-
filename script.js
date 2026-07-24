@@ -48,6 +48,18 @@ const whatsappURL =
 `https://wa.me/919049343193?text=${encodeURIComponent(message)}`;
 
 window.open(whatsappURL, "_blank");
+  const message = 
+`New Booking Received - Sky Healthcare
+
+Name: ${name}
+Mobile: ${mobile}
+Service: ${service}
+Patient Details: ${address}`;
+
+const whatsappURL = 
+`https://wa.me/919049343193?text=${encodeURIComponent(message)}`;
+
+window.open(whatsappURL, "_blank");
 alert("Booking Successfully Submitted!");
 bookingForm.reset();
 
