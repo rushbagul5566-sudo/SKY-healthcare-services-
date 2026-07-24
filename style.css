@@ -71,3 +71,41 @@ nav a:hover{
 .hero button:hover{
     transform:scale(1.05);
 }
+.services{
+    padding:80px 8%;
+    background:#f8fbff;
+    text-align:center;
+}
+
+.services h2{
+    font-size:38px;
+    color:#0b63ce;
+    margin-bottom:40px;
+}
+
+.service-box{
+    display:inline-block;
+    width:280px;
+    margin:15px;
+    padding:30px;
+    background:#ffffff;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
+    vertical-align:top;
+}
+
+.service-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(11,99,206,0.2);
+}
+
+.service-box h3{
+    color:#0b63ce;
+    margin-bottom:15px;
+}
+
+.service-box p{
+    color:#555;
+    line-height:1.6;
+    }
